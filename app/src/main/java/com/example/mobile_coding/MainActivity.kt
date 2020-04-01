@@ -3,7 +3,7 @@ package com.example.mobile_coding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.example.mobile_coding.Model.Parrot
+import com.example.mobile_coding.models.Parrot
 
 class MainActivity : AppCompatActivity() {
 

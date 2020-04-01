@@ -1,4 +1,4 @@
-package com.example.mobile_coding.Model
+package com.example.mobile_coding.models
 
 class Parrot
 constructor(
