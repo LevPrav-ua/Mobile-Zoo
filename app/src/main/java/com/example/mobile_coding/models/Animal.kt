@@ -10,4 +10,5 @@ abstract class Animal (
     open fun getInfo() : String {
         return "$name, age: $age"
     }
+
 }
