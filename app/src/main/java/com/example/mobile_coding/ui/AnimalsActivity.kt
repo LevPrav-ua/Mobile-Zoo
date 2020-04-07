@@ -25,6 +25,6 @@ class AnimalsActivity : AppCompatActivity() {
     }
 
     private fun itemClick(animal: Animal) {
-
+        // TODO implement item click handle
     }
 }
