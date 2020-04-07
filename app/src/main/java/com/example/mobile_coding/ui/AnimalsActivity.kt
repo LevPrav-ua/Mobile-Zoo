@@ -3,7 +3,9 @@ package com.example.mobile_coding.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.mobile_coding.model.Cat
 import com.example.mobile_coding.R
+import com.example.mobile_coding.model.Dog
 import com.example.mobile_coding.model.Parrot
 
 class AnimalsActivity : AppCompatActivity() {
@@ -11,10 +13,17 @@ class AnimalsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val textView = findViewById<TextView>(R.id.testTextView)
 
-        val parrot1 = Parrot("TestName", 6)
+        val parrotTextView = findViewById<TextView>(R.id.parrotTextView)
+        val catTextView = findViewById<TextView>(R.id.catTextView)
+        val dogTextView = findViewById<TextView>(R.id.dogTextView)
 
-        textView.text = parrot1.getInfo()
+        val parrot = Parrot("Krasava", 6)
+        val cat = Cat("Pushok", 3)
+        val dog = Dog("Sharik", 8)
+
+        parrotTextView.text = parrot.getInfo()
+        catTextView.text = cat.getInfo()
+        dogTextView.text = dog.getInfo()
     }
 }
