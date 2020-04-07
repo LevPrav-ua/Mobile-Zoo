@@ -1,29 +1,30 @@
 package com.example.mobile_coding.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import com.example.mobile_coding.model.Cat
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_coding.R
-import com.example.mobile_coding.model.Dog
-import com.example.mobile_coding.model.Parrot
+import com.example.mobile_coding.model.Animal
+import com.example.mobile_coding.repository.AnimalsRepository
+import com.example.mobile_coding.repository.FakeAnimalsRepository
+import kotlinx.android.synthetic.main.activity_animals.*
 
 class AnimalsActivity : AppCompatActivity() {
 
+    lateinit var repository: AnimalsRepository
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_animals)
+        repository = FakeAnimalsRepository()
 
-        val parrotTextView = findViewById<TextView>(R.id.parrotTextView)
-        val catTextView = findViewById<TextView>(R.id.catTextView)
-        val dogTextView = findViewById<TextView>(R.id.dogTextView)
+        animalsRecyclerView.apply {
+            adapter = AnimalsAdapter(repository.getAnimals(), ::itemClick)
+            layoutManager = LinearLayoutManager(this@AnimalsActivity)
+        }
+    }
 
-        val parrot = Parrot("Krasava", 6)
-        val cat = Cat("Pushok", 3)
-        val dog = Dog("Sharik", 8)
+    private fun itemClick(animal: Animal) {
 
-        parrotTextView.text = parrot.getInfo()
-        catTextView.text = cat.getInfo()
-        dogTextView.text = dog.getInfo()
     }
 }
