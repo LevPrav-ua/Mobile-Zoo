@@ -1,6 +1,9 @@
-package com.example.mobile_coding.models
+package com.example.mobile_coding.model
 
-class Cat(name: String, age: Int) : Animal(name, age, "Cat Prop"
+class Cat
+constructor(
+    name: String,
+    age: Int) : Animal(name, age
 ) {
     override fun communicate(): String {
         return "MEOW"

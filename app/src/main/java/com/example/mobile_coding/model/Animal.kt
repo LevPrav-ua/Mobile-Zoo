@@ -1,9 +1,8 @@
-package com.example.mobile_coding.models
+package com.example.mobile_coding.model
 
 abstract class Animal (
     var name: String,
-    var age: Int,
-    var customProp: String = "Default"
+    var age: Int
 ) {
     abstract fun communicate(): String
 

@@ -1,11 +1,12 @@
-package com.example.mobile_coding
+package com.example.mobile_coding.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.example.mobile_coding.models.Parrot
+import com.example.mobile_coding.R
+import com.example.mobile_coding.model.Parrot
 
-class MainActivity : AppCompatActivity() {
+class AnimalsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

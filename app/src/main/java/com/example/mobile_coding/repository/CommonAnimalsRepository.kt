@@ -1,0 +1,3 @@
+package com.example.mobile_coding.repository
+
+class CommonAnimalsRepository
